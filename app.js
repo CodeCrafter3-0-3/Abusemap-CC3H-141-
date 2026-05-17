@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fetch live data from SQLite Backend
     async function fetchIncidents() {
         try {
-            const res = await fetch('http://localhost:3000/api/incidents');
+            const res = await fetch('/api/incidents');
             if (res.ok) {
                 incidents = await res.json();
                 updateUI();
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 // Send to Node.js Backend
-                const response = await fetch('http://localhost:3000/api/incidents', {
+                const response = await fetch('/api/incidents', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(newIncident)
@@ -493,7 +493,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const id = e.target.getAttribute('data-id');
                 const newStatus = e.target.value;
                 try {
-                    await fetch(`http://localhost:3000/api/incidents/${id}/status`, {
+                    await fetch(`/api/incidents/${id}/status`, {
                         method: 'PUT',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ status: newStatus })
