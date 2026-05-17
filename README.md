@@ -1,5 +1,7 @@
 # AbuseMap - Punjab Incident Dashboard 
 
+**Live Demo:** [https://abusemap-cc3h-141.onrender.com](https://abusemap-cc3h-141.onrender.com)
+
 AbuseMap is a real-time, state-of-the-art dashboard designed to monitor and visualize animal cruelty and rescue incidents across the Punjab region of India. It combines automated news scraping with user-driven reporting to provide actionable insights for animal welfare.
 
 ## Features
